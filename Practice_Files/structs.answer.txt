@@ -1,0 +1,61 @@
+#include<stdio.h>
+struct PlusOrMinus
+{
+	int plus;
+	int minus;
+	int result;
+};
+#define SZ 3
+int main(void)
+{
+	int i;
+	struct PlusOrMinus pm[SZ] = { {2,2,0},{9,1,0},{7,5,0} };
+	struct PlusOrMinus ph = { 4, 2, 0 };
+	for ( i = 0; i < SZ; i++)
+	{
+		pm[i].minus = ph.plus * pm[i].plus;
+		pm[i].plus = ph.minus * pm[i].minus;
+		pm[i].result = i == 1 ?-2:2;
+		printf("%d - %d - %d\n", pm[i].plus, pm[i].minus, pm[i].result);
+		ph.minus++;
+	}
+	return 0;
+}
+=============================================================
+3: struct PlusOrMinus defined with 3 int data members
+10: SZ defined as constant value 3
+12: enter main function
+14: int i declared as interator
+15: struct PlusOrMinus array pm instantiated with 3 elements 
+16: struct PlusOrMinus ph instantiated as single struct with elemens set to 4, 2, 0
+17: begin for loop, i set to 0, maximum 3 interations
+17: 0<3 ? T enter loop
+19: pm[0].minus = 4 * 2 (8)
+20: pm[0].plus = 2 * 8 (16)
+21: pm[0].result = 0 == 1? F (2)
+22: output - 16 - 8 - 2
+23: ph.minus is incremented by 1 (3)
+17: i is incremented by 1, i = 1, 1<3 T enter loop
+19: pm[1].minus = 4 * 9 (36)
+20: pm[1].plus = 3 * 36 (108)
+21: pm[1].result = 1 == 1? T (-2)
+22: output - 108 - 36 - -2
+23: ph.minus incremented by 1 (4)
+17: i is incremented by 1, 1 = 2, 2 < 3? T enter loop
+19: pm[2].minus = 4 * 7 (28)
+20: pm[2].plus = 4 * 28 (112)
+21: pm[2}.result = 2 ++ 1 ? F (2)
+22: output - 112 - 28 - 2
+23: ph.minus is incremented by 1 (5)
+17: i is incremented by 1, i = 3, 3<3? F exit loop
+26: control is returned to Os with code 0
+
+
+
+
+
+
+
+
+
+

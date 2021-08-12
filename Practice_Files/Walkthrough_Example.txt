@@ -1,0 +1,88 @@
+Walkthrough Example
+
+
+1.	#include<stdio.h>
+2.	#define SZ 3
+3.	struct OrderItem
+4.	{
+5.	    int SKU;
+6.	    int quantityInStock;
+7.	    int reorderPoint;
+8.	    int reorderQuantity;
+9.	};
+
+10.	struct OrderList
+11.	{
+12.	    int SKU;
+13.	    int quantity;
+14.	};
+
+15.	int main(void)
+16.	{
+17.	    struct OrderItem items[SZ] = { {101, 5, 5, 6},{102, 3, 4, 5},{103, 7, 5, 7} };
+18.	    struct OrderList orders[SZ] = { 0 };
+19.	    int i;
+20.	    for (i = 0; i < SZ; i++)
+21.	    {
+22.	        if (items[i].quantityInStock <= items[i].reorderPoint)
+23.	        {
+24.	            orders[i].SKU = items[i].SKU;
+25.	            orders[i].quantity = items[i].reorderQuantity;
+26.	            printf("%d of %d added to order list.\n", orders[i].quantity, orders[i].SKU);
+27.	        }
+28.	        else
+29.	        {
+30.	            orders[i].SKU = -1;
+31.	            printf("%d fully stocked.\n", items[i].SKU);
+32.	        }
+33.	    }
+34.	    return 0;
+35.	}
+
+
+
+1.	include standard input/output library
+2.	define a constant SZ equal to 3
+3.	define a structure OrderItem with 4 int type members
+10.	define a structure OrderList with 2 int type members
+
+15.	enter main function
+17.	declare structure OrderItem array with size of 3, initalize with values
+18.	declare structure OrderList array with size of 3, initalize into safe states
+19.	declare iterator i
+
+20.	i=0, i<3, T, enter for loop
+22.	5 <= 5? T
+24.	orders[0].SKU = items[0].SKU (101)
+25.	orders[0].quantity = items[0].reorderQuantity (5)
+26.	display: 5 of 101 added to order list
+
+20.	i incremented by 1, i==1, i<3, T, enter for loop
+22.	3 <= 4? T
+24.	orders[1].SKU = items[1].SKU (102)
+25.	orders[1].quantity = items[1].reorderQuantity (4)
+26.	display: 4 of 102 added to order list
+
+20.	i incremented by 1, i==2, i<3, T, enter for loop
+22.	7 <= 5? F
+30.	orders[2].SKU = -1
+31.	display: 103 fully stocked
+
+20.	i incremented by 1, i==3, i<3, F, exit for loop
+34.	returns the control to the OS and exits with the value 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

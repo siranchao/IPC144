@@ -1,0 +1,65 @@
+WALKTHROUGH EXAMPLE
+ 
+1.	#include <stdio.h>
+2.	struct faculty {
+3.	int facultyId;
+4.	float salary;
+5.	};
+6.	int main(void){
+7.	 	int i;
+8.	              float total_salary = 0.0;
+9.	              struct faculty Faculty[3];
+10.	              printf("\nEnter details for 3 faculties:\n");
+11.	             for(i=0; i < 3 ; i++ ){
+12.	                          printf("\nEnter ID : ");
+13.	                          scanf(“%d”, Faculty[i].facultyId);
+14.	                          printf("Enter salary : ");
+15.	                          scanf(“%f”, Faculty[i].salary);
+16.	             }
+17.	       /*print faculty details*/
+18.	            printf("\nEntered details are :\n");
+19.	            for(i=0; i<3 ; i++ ){         
+20.	                total_salary +=  Faculty[i].salary;
+21.	            }
+22.	          printf(“Total salary of the faculties is: %d”, total_salary );
+23.	   return 0;
+24.	}
+
+
+
+
+7. a variable i of type integer is being declared
+8. a variable total_salary of type float is being declared and instantiated to 0
+9. an array Faculty of structure type with size 3 is being declared
+10. A message is printed to enter the details for 3 faculties
+11. for loop is entered, i is set to 0, 0 < 3? true - proceed to first line in loop
+12. A message is printed to enter ID of the faculty
+13. Accept the input from the user in Faculty[0].facultyId
+14. A message is printed to enter salary of the faculty
+15. Accept the input from the user in Faculty[0].salary
+11. i incremented by 1, i equals 1, 1 < 3? true - proceed to first line in loop
+12. A message is printed to enter ID of the faculty
+13. Accept the input from the user in Faculty[1].facultyId
+14. A message is printed to enter salary of the faculty
+15. Accept the input from the user in Faculty[1].salary
+11. i incremented by 1, i equals 2, 2 < 3? true - proceed to first line in loop
+12. A message is printed to enter ID of the faculty
+13. Accept the input from the user in Faculty[2].facultyId
+14. A message is printed to enter salary of the faculty
+15. Accept the input from the user in Faculty[2].salary
+11. i incremented by 1, i equals 3, 3 < 3? False – exit for loop
+18. A message is printed to display the details being entered
+19. for loop is entered, i is set to 0, 0 < 3? true - proceed to first line in loop 
+20. total_salary = 0+faculty[0].salary
+19. i incremented by 1, i equals 1, 1 < 3? true - proceed to first line in loop
+20. total_salary = total_salary+faculty[1].salary
+19. i incremented by 2, i equals 2, 2 < 3? true - proceed to first line in loop
+20. total salary = total_salary +faculty[2].salary
+19. i incremented by 1, i equals 3, 3 < 3? False, exits the loop
+23. returns the control to the operating system and exits with the value 0
+
+ 
+
+
+
+

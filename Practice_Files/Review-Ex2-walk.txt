@@ -1,0 +1,35 @@
+24. 
+
+25. delcare and initialize Room structure array called job with size of 2
+
+26. enter for loop, i = 0, 0 < 2
+
+28. job[0].name[0] != '\o'  T
+
+29. printf(), Room: Kitchen
+
+16. call area function, area(&job[0].paintable) 14, 10
+18. area = 14*10 (140)
+19. printf() Wall-1: 140
+20. return 140, return control to main
+
+16. call area function, area(&job[0].nonpaintable) 10, 2
+18. area = 10*2 (20)
+19. printf() Window: 140
+20. return 20, return control to main
+
+30. paintable = 140 - 20 (120)
+
+31. printf() Paintable Area: 120
+
+32. totalPaontable = 0 + 120 (120)
+
+26  i++ (1), 1 < 2, T continue loop
+
+28. job[0].name[0] != '\o'  F
+
+26. i++ (2), 2 < 2, F exit loop
+
+35. printf(), Total Paintable Area: 120
+
+36. return control to OS with value 0, program ends
