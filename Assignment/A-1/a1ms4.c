@@ -1,13 +1,3 @@
-/* -------------------------------------------
-Name: Siran Cao
-Student number: 159235209
-Email: scao34@myseneca.ca
-Section: NAA
-Date: 07/06/2021
-----------------------------------------------
-Assignment: 1
-Milestone:  4
----------------------------------------------- */
 
 #define _CRT_SECURE_NO_WARNINGS
 
