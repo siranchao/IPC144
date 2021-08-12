@@ -1,7 +1,3 @@
-// Siran Cao
-// 159235209
-// scao34@myseneca.ca
-// NAA
 
 #include<stdio.h>
 
