@@ -1,12 +1,4 @@
-/*
-	==================================================
-	Workshop #6 (Part-2):
-	==================================================
-	Name   : Siran Cao
-	ID     : 159235209
-	Email  : scao34@myseneca.ca
-	Section: NAA
-*/
+
 
 
 #define MAX_PRODUCTS 3
