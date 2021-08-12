@@ -1,20 +1,4 @@
-//==============================================
-// Group member:   Siran Cao
-// Student ID:	   159235209
-// Email:          scao34@myseneca.ca
 
-// Group member:   Yiu Fai Tse 
-// Student ID:	   151532207 
-// Email:          yftse@myseneca.ca 
-
-// Group member:   Jingyi Lu  
-// Student ID:	   151599206 
-// Email:          jlu118@myseneca.ca 
-//==============================================
-// Section:        NAA
-// Date:		   8/9/2021
-// Assignment:     Final exam
-//==============================================
 
 #define MAX_ACTIVITY_NAME_LEN 15
 #define MAX_NAME_LEN 20
